@@ -1,0 +1,171 @@
+### 5.송금하기 등록
+POST http://localhost:18080/api/v1/remits/
+Content-Type: application/json
+
+{
+  "senderUserId": "1",
+  "pushType": "KAKAO",
+  "remitReceiverName": "박씨",
+  "remitReceiverPhone": "01012345678",
+  "remitMessage": "결혼축하해",
+  "orderAccountList": [
+    {
+      "orderCount": 1,
+      "accountToken": "acc_h2CA88hS5se45bG1",
+      "accountName": "KB",
+      "accountAmt": "100000000",
+      "orderAccountOptionGroupList": []
+    }
+  ]
+}
+
+### 6.송금하기 수락대기 상태로 변경
+POST http://localhost:18080/api/v1/remits/rm_oAuEO6j2BMZFxn4A8/remit-processing
+Content-Type: application/json
+
+
+### 수락 상태로 변경
+POST http://localhost:18080/api/v1/remits/rm_oAuEO6j2BMZFxn4A8/accept-remit
+Content-Type: application/json
+
+{
+  "receiverName": "김철수",
+  "receiverPhone": "01033334444",
+  "etcMessage": "감사합니다!"
+}
+
+### 송금하기 조회
+GET http://localhost:18080/api/v1/remits/rm_oAuEO6j2BMZFxn4A8
+Content-Type: application/json
+
+
+########################################################################################################################
+
+
+
+
+
+
+
+### 송금하기 등록
+POST http://localhost:18080/api/v1/remits/
+Content-Type: application/json
+
+{
+  "buyerUserId": "1",
+  "payMethod": "KAKAO_PAY",
+  "pushType": "KAKAO",
+  "remitReceiverName": "철수",
+  "remitReceiverPhone": "01012345678",
+  "remitMessage": "결혼축하해",
+  "orderAccountList": [
+    {
+      "orderCount": 1,
+      "accountToken": "acc_JHCrO3eg2VHXabpG",
+      "accountName": "KB",
+      "accountAmt": "100000",
+      "orderAccountOptionGroupList": []
+    }
+  ]
+}
+
+### 송금하기 수락대기 상태로 변경
+POST http://localhost:18080/api/v1/remits/rm_fa2V6Q4Wbpzfswv7w/remit-processing
+Content-Type: application/json
+
+
+
+
+### 수락 상태로 변경
+POST http://localhost:18080/api/v1/remits/rm_WMYMMTgxd6uUAL0uQ/accept-remit
+Content-Type: application/json
+
+{
+  "receiverName": "김철수",
+  "receiverPhone": "01033334444",
+  "etcMessage": "감사합니다!"
+}
+
+
+
+
+### 선물하기 조회
+GET http://localhost:18080/api/v1/remits/gt_34YTqV3glgqL3wHoK
+Content-Type: application/json
+
+
+
+
+### 송금하기 등록
+POST http://localhost:18080/api/v1/remits/
+Content-Type: application/json
+
+{
+  "buyerUserId": "1",
+  "payMethod": "KAKAO_PAY",
+  "pushType": "KAKAO",
+  "remitReceiverName": "홍길동",
+  "remitReceiverPhone": "01012345678",
+  "remitMessage": "생일축하해",
+  "orderAccountList": [
+    {
+      "orderCount": 1,
+      "accountToken": "acc_a2oRW2uf7PlYHwAi",
+      "accountName": "KB",
+      "accountAmt": "30000",
+      "orderAccountOptionGroupList": [
+        {
+          "ordering": 1,
+          "accountOptionGroupName": "사이즈",
+          "orderAccountOptionList": [
+            {
+              "ordering": 1,
+              "accountOptionName": "MEDIUM",
+              "accountOptionAmt": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
+
+### 송금하기 등록
+POST http://localhost:18080/api/v1/remits/
+Content-Type: application/json
+
+{
+  "buyerUserId": "1",
+  "payMethod": "KAKAO_PAY",
+  "pushType": "KAKAO",
+  "remitReceiverName": "홍길동",
+  "remitReceiverPhone": "01012345678",
+  "remitMessage": "생일축하해",
+  "orderAccountList": []
+}
+
+### 선물하기 결제중 상태로 변경
+POST http://localhost:18080/api/v1/remits/rm_6BXP5W2V0lb3epix7/payment-processing
+Content-Type: application/json
+
+
+
+
+
+
+### 선물하기 수락 상태로 변경
+POST http://localhost:18080/api/v1/remits/rm_b40YdUbmp6ahATzFu/accept-remit
+Content-Type: application/json
+
+{
+  "receiverName": "김철수",
+  "receiverPhone": "01000001111",
+  "receiverZipcode": "12312",
+  "receiverAddress1": "서울시 성북구",
+  "receiverAddress2": "우리집",
+  "etcMessage": "감사합니다!"
+}
+
+### 선물하기 조회
+GET http://localhost:18080/api/v1/remits/gt_34YTqV3glgqL3wHoK
+Content-Type: application/json
